@@ -19,6 +19,7 @@ taboolib {
         desc("A ranking system based on LuckPerms")
         dependencies {
             name("LuckPerms")
+            name("PlaceholderAPI").optional(true)
         }
         contributors {
             name("alazeprt")
@@ -28,12 +29,14 @@ taboolib {
 
 repositories {
     mavenCentral()
+    maven("https://repo.extendedclip.com/content/repositories/placeholderapi/")
 }
 
 dependencies {
     compileOnly("ink.ptms.core:v12004:12004:mapped")
     compileOnly("ink.ptms.core:v12004:12004:universal")
     compileOnly("net.luckperms:api:5.4")
+    compileOnly("me.clip:placeholderapi:2.11.6")
     compileOnly(kotlin("stdlib"))
     compileOnly(fileTree("libs"))
 }
