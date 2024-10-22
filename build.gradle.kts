@@ -16,7 +16,7 @@ taboolib {
     version { taboolib = "6.1.2-beta10" }
     description {
         name("LPRank")
-        desc("A ranking system based on LuckPerms")
+        desc("A plugin based on the LuckPerms implementation of the ranking system")
         dependencies {
             name("LuckPerms")
             name("PlaceholderAPI").optional(true)
