@@ -19,6 +19,10 @@ object RankCommand {
                 Bukkit.getOnlinePlayers().map { player -> player.name }
             }
             execute<CommandSender> { sender, context, _ ->
+                if (!sender.hasPermission("lprank.command.get.other")) {
+                    sender.sendMessage("§cYou don't have permission to do this!")
+                    return@execute
+                }
                 val player = Bukkit.getPlayer(context.player("player").uniqueId)
                 if (player == null) {
                     sender.sendMessage("§cThe player ${context["player"]} is not online!")

@@ -17,6 +17,11 @@ LPRank is a ranking system plugin based on LuckPerms that allows you to set a cu
 | /rank set <player> <rank> | lprank.command.set        | -                         | Set a specific player rank   |
 | /rank reset <player>      | lprank.command.reset      | /rank [remove, toDefault] | Reset a specific player rank |
 | /rank setDefault <player> | lprank.command.setDefault | -                         | Set the default rank         |
+| /rank ui                  | lprank.command.ui         | /rank [ui, menu]          | Open the rank setting menu   |
+
+### Other permissions
+- lprank.command.get.other: Get other player's rank
+- lprank.ui.admin: Open the admin rank setting menu
 
 ## Future Plans
 - Add configs so that they can be displayed in chat or on the tab
