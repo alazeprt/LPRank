@@ -1,0 +1,5 @@
+# Which key of the metadata to store the rank data in
+# Default: rank
+# If you set it to prefix or suffix, it will be stored in the prefix and suffix that comes with LuckPerms
+# It also removes any prefixes or suffixes the player has when operating on them.
+metadata: "rank"

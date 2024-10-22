@@ -61,7 +61,7 @@ object RankCommand {
         dynamic("rank") {
             execute<CommandSender> { sender, context, _ ->
                 try {
-                    LPUtils.setDefault(context["rank"])
+                    LPUtils.setDefaultRank(context["rank"])
                 } catch (e: Exception) {
                     sender.sendMessage("§cThere was an exception while setting the default rank: $e. Please try again or give us feedback!")
                     e.printStackTrace()
@@ -84,7 +84,7 @@ object RankCommand {
                     sender.sendMessage("§cThe player ${context["player"]} is not online!")
                     return@execute
                 }
-                LPUtils.reset(player)
+                LPUtils.resetPlayerRank(player)
                 sender.sendMessage("§aThe rank of ${context["player"]} reset successfully!")
             }
         }
@@ -93,7 +93,7 @@ object RankCommand {
                 sender.sendMessage("§cThis command can only be used by players!")
                 return@execute
             }
-            LPUtils.reset(sender)
+            LPUtils.resetPlayerRank(sender)
             sender.sendMessage("§aSuccessfully reset your rank!")
         }
     }
