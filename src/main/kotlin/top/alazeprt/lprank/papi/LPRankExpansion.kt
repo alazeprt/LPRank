@@ -4,7 +4,6 @@ import me.clip.placeholderapi.expansion.PlaceholderExpansion
 import org.bukkit.OfflinePlayer
 import org.bukkit.entity.Player
 import org.jetbrains.annotations.NotNull
-import taboolib.common5.util.replace
 import top.alazeprt.lprank.util.LPUtils
 
 
