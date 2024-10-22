@@ -7,6 +7,7 @@ import taboolib.common.platform.command.CommandBody
 import taboolib.common.platform.command.CommandHeader
 import taboolib.common.platform.command.player
 import taboolib.common.platform.command.subCommand
+import top.alazeprt.lprank.ui.UserGUI
 import top.alazeprt.lprank.util.LPUtils
 
 @CommandHeader("rank", ["lprank"])
@@ -95,6 +96,17 @@ object RankCommand {
             }
             LPUtils.resetPlayerRank(sender)
             sender.sendMessage("§aSuccessfully reset your rank!")
+        }
+    }
+
+    @CommandBody(aliases = ["gui", "menu"], permission = "lprank.command.ui")
+    val ui = subCommand {
+        execute<CommandSender> {sender, _, _ ->
+            if (sender !is Player) {
+                sender.sendMessage("§cThis command can only be used by players!")
+                return@execute
+            }
+            UserGUI.open(sender)
         }
     }
 }

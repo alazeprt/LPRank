@@ -1,19 +1,18 @@
-import io.izzel.taboolib.gradle.BUKKIT
-import io.izzel.taboolib.gradle.UNIVERSAL
+import io.izzel.taboolib.gradle.*
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     java
-    id("io.izzel.taboolib") version "2.0.11"
+    id("io.izzel.taboolib") version "2.0.17"
     id("org.jetbrains.kotlin.jvm") version "1.8.22"
 }
 
 taboolib {
     env {
         // 安装模块
-        install(UNIVERSAL, BUKKIT)
+        install(UNIVERSAL, BUKKIT, UI, BUKKIT_UTIL)
     }
-    version { taboolib = "6.1.2-beta10" }
+    version { taboolib = "6.2.0-beta21" }
     description {
         name("LPRank")
         desc("A plugin based on the LuckPerms implementation of the ranking system")
@@ -33,8 +32,8 @@ repositories {
 }
 
 dependencies {
-    compileOnly("ink.ptms.core:v12004:12004:mapped")
-    compileOnly("ink.ptms.core:v12004:12004:universal")
+    compileOnly("ink.ptms.core:v12101:12101:mapped")
+    compileOnly("ink.ptms.core:v12101:12101:universal")
     compileOnly("net.luckperms:api:5.4")
     compileOnly("me.clip:placeholderapi:2.11.6")
     compileOnly(kotlin("stdlib"))

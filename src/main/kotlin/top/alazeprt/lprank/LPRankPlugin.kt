@@ -7,6 +7,7 @@ import taboolib.common.platform.Plugin
 import taboolib.module.configuration.Config
 import taboolib.module.configuration.ConfigFile
 import top.alazeprt.lprank.papi.LPRankExpansion
+import top.alazeprt.lprank.ui.UserGUI
 import top.alazeprt.lprank.util.StorageMode
 import java.util.Objects
 
@@ -33,5 +34,6 @@ object LPRankPlugin : Plugin() {
             mode = StorageMode.CUSTOM
             key = config.getString("key") ?: "rank"
         }
+        UserGUI.init()
     }
 }
