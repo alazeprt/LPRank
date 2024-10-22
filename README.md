@@ -1,3 +1,4 @@
+![LPRank](./icon.png "LPRank")
 # LPRank
 ### A plugin based on the LuckPerms implementation of the ranking system
 
